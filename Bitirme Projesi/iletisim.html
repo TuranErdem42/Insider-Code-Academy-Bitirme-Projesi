@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fontlar -->
+    <link rel="stylesheet" href="/style/iletisim.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="style/loading.css">
+    <title>İletişim</title>
+</head>
+<body>
+    <div id="loading"></div>
+    <!-- Header -->
+    <div class="title">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="/img/logo.png" alt=""></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">ANASAYFA</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </section>
+        <h1>İletişim</h1>
+    </div>
+    <!-- Harita -->
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385399.35199312965!2d28.68253427111795!3d41.00485195541628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1669491472975!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section class="iletisim">
+        <div class="row">
+            <div class="iletisim-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Bulunduğumuz Bölgeler</h5>
+                        <p>İstanbul/Türkiye</p>
+                        <p>Londra/İngiltere</p>
+                        <p>Newyork/ABD</p>
+                        <p>Washington/ABD</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+90 123 456 7890</h5>
+                        <p>Pazartesiden Cumartesiye, 08:00 - 00:00</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>info@arnoldgym.com</h5>
+                        <p>Sorularınızı Bize Gönderin</p>
+                    </span>
+                </div>
+            </div>
+            <!-- İletişim Text -->
+            <div class="iletisim-col">
+                <form action="">
+                    <input type="text" placeholder="İsminizi Giriniz...*"  >
+                    <input type="email" placeholder="E-mail Giriniz...*" >
+                    <input type="text" placeholder="Konu Giriniz...*" >
+                    <textarea rows="8" placeholder="Mesajınızı Giriniz...*"></textarea>
+                    <button type="submit" class="iletisimBtn" id="iletisimbtn">Mesajı Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+      <!-- Javascript -->
+      <script>
+        let navLinks=document.getElementById("navLinks");
+        let iletisimbtn=document.getElementById("iletisimbtn");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+        iletisimbtn.onclick=function(){
+            alert("Mesajınız Gönderilmiştir.");
+        }
+
+          // Loader Page
+          const fadeOut = () => {
+            const loader=document.getElementById("loading");
+            loader.classList.add("fade");
+        }
+        window.addEventListener("load", fadeOut);
+    </script>
+</body>
+</html>

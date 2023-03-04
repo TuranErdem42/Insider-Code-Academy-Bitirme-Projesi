@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fontlar -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/style/giris.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="style/loading.css">
+    <title id="baslik">Kaydol</title>
+</head>
+<body>
+    <div id="loading"></div>
+    <div class="container">
+        <!-- Header -->
+        <div class="title">
+            <section class="header">
+                <nav>
+                 <a href="index.html"><img src="/img/logo.png" alt=""></a>
+                 <div class="nav-links" id="navLinks">
+                       <i class="fa fa-times" onclick="hideMenu()"></i>
+                     <ul>
+                         <li><a href="index.html">ANASAYFA</a></li>
+                     </ul>
+                 </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>
+         </section>
+        </div>
+
+        <div class="form-box">
+            <h1 id="title">Kaydol</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="isimField">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="İsim" class="input">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" placeholder="E-mail" class="input" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="Şifre" class="input">
+                    </div>
+                    <p id="sifre">Şifremi Unuttum! <a href="#" onclick="sifreUnuttum()" >Buraya Tıklayın</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="kaydolBtn">Kaydol</button>
+                    <button type="submit" id="girisBtn" class="disable">Giriş Yap</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Javascript -->
+    <script>
+        let kaydolBtn=document.getElementById("kaydolBtn");
+        let girisBtn=document.getElementById("girisBtn");
+        let isimField=document.getElementById("isimField");
+        let title=document.getElementById("title");
+        let baslik=document.getElementById("baslik");
+        var navLinks=document.getElementById("navLinks");
+        let sifre=document.getElementById("sifre");
+        
+        girisBtn.onclick=function(){
+            isimField.style.maxHeight="0";
+            sifre.style.visibility="visible";
+            title.innerHTML="Giriş Yap";
+            kaydolBtn.classList.add("disable");
+            girisBtn.classList.remove("disable");
+            baslik.innerHTML="Giriş Yap";
+        }
+        kaydolBtn.onclick=function(){
+            isimField.style.maxHeight="65px";
+            sifre.style.visibility="hidden";
+            title.innerHTML="Kaydol";
+            girisBtn.classList.add("disable");
+            kaydolBtn.classList.remove("disable");
+            baslik.innerHTML="Kaydol";
+        }
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+        function sifreUnuttum(){
+            alert("Şifre Yenileme Linki Mailinize Gönderilmiştir!");
+        }
+   
+         // Loader Page
+         const fadeOut = () => {
+            const loader=document.getElementById("loading");
+            loader.classList.add("fade");
+        }
+        window.addEventListener("load", fadeOut);
+    </script>
+</body>
+</html>

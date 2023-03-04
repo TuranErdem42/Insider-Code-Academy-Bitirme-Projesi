@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+
+/* Header Bölümü */
+.title {
+  min-height: 600px;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/img/mmaBack.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+  margin-bottom: 10%;
+}
+
+.text-box h1 {
+  color: #fff;
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box a {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 100px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.text-box a:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+/* İçerik Bölümü */
+
+.mma {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  margin-bottom: 15%;
+}
+
+.mma-col img {
+  width: 50%;
+  border-radius: 30px;
+  float: left;
+  margin: 0 30px;
+}
+
+#res2 {
+  float: right;
+}
+
+.mma-col p {
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #777;
+}
+
+.mma-col p::before {
+  content: "\2022";
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.mma h1 {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#res3 {
+  float: right;
+}
+
+.mma-col h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.mma-col font {
+  font-size: 23px;
+  color: #777;
+  line-height: 50px;
+}
+
+font span {
+  font-style: italic;
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .title {
+    overflow: hidden;
+  }
+
+  #res1,
+  #res2,
+  #res3,
+  #res4 {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .mma-col h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .mma-col font {
+    font-size: 20px;
+  }
+}

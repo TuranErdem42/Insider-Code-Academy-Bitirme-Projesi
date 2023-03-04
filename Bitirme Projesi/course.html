@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CSS -->
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="/style/course.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="style/loading.css">
+    <title>Kurslar</title>
+</head>
+<body>
+    <div id="loading"></div>
+    <div class="container">
+        <!-- Header -->
+        <section class="title">
+            <section class="header">
+                <nav>
+                    <a href="index.html"><img src="/img/logo.png" alt=""></a>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">ANASAYFA</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>
+            </section>
+            <h1>İyi ve sağlıklı yaşamaya inanıyorsan <br> <span>ARNOLD GYM</span><br> tam sana göre!</h1>
+        </section>
+
+        <!-- Fiyat Bölümü -->
+        <section class="plan">
+            <h2>Planını Seç</h2>
+            <div class="fiyat-row">
+                <div class="fiyat-col baslangic">
+                    <p>Başlangıç</p>
+                    <h3><font>450</font> 300 TL <span>/ AYDA</span></h3>
+                    <a href="giris.html">
+                        <button>Bize Katıl</button>
+                    </a>
+                    <hr>
+                    <ul>
+                        <li>Kişiye Özel Ölçüm ve Program</li>
+                        <li>Danışmanlık Hizmeti</li>
+                        <li>Grup Derslerine Katılabilme</li>
+                    </ul>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <div class="discount-wrap">
+                        <div class="discount">ÖZEL TEKLİF!</div>
+                    </div>
+                </div>
+                <div class="fiyat-col orta">
+                    <p>Orta Seviye</p>
+                    <h3>750 TL <span>/ AYDA</span></h3>
+                    <a href="giris.html">
+                        <button>Bize Katıl</button>
+                    </a>
+                    <hr>
+                    <ul>
+                        <li>Kişiye Özel Ölçüm ve Program</li>
+                        <li>Danışmanlık Hizmeti</li>
+                        <li>Grup Derslerine Erken Rezervasyon</li>
+                        <li>Üye Olunan Kulübü Sınırsız Kullanım</li>
+                        <li>Seçtiğiniz Kulüpleri Kullanabilme</li>
+                        <li>Ücretsiz Dondurma Hakkı</li>
+                    </ul>
+                    <p>-</p>
+                </div>
+                <div class="fiyat-col ileri">
+                    <p>İleri</p>
+                    <h3>1200 TL <span>/ AYDA</span></h3>
+                    <a href="giris.html">
+                        <button>Bize Katıl</button>
+                    </a>
+                    <hr>
+                    <ul>
+                        <li>Kişiye Özel Ölçüm ve Program</li>
+                        <li>Danışmanlık Hizmeti</li>
+                        <li>Grup Derslerine Erken Rezervasyon</li>
+                        <li>Tüm Kulüpleri Sınırsız Kullanabilme</li>
+                        <li>Supplement Desteği</li>
+                        <li>Ücretsiz Dondurma Hakkı</li>
+                        <li>Ekipman Desteği</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+         // Loader Page
+         const fadeOut = () => {
+            const loader=document.getElementById("loading");
+            loader.classList.add("fade");
+        }
+        window.addEventListener("load", fadeOut);
+    </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fontlar -->
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="style/loading.css">
+    <title>ARNOLD GYM</title>
+</head>
+<body>
+    <div id="loading"></div>
+    <!-- Header -->
+    <section class="header" id="anasayfa">
+        <nav>
+            <a href="index.html"><img src="/img/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">ANASAYFA</a></li>
+                    <li><a href="#egitim">EĞİTİMLER</a></li>
+                    <li><a href="#kulüp">KULÜPLER</a></li>
+                    <li><a href="#iletisim">İLETİŞİM</a></li>
+                    <li><a href="#footer">HAKKIMIZDA</a></li>
+                    <li><a href="giris.html">KAYDOL</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 class="slide-left">Dünya'nın En Büyük Spor Kompleksi</h1>
+            <a href="course.html" class="egitimBtn slide-left">Eğitime Git</a>
+        </div>
+    </section>
+
+    <!-- Theme Button -->
+    <div class="toggleBtn" id="toggleBtn">
+        <img src="/img/moon.png" alt="icon" id="btnIcon">
+    </div>
+
+    <!-- Eğitimler -->
+    <a id="egitim"></a>
+    <section class="egitim reveal">
+        <div class="egitimRes">
+            <img src="img/egitimRes1.png" alt="neon" id="egt1">
+        </div>
+        <div class="egitimRes">
+            <img src="img/egitimRes2.jpg" alt="neon" id="egt2">
+        </div>
+        <h1>Eğitimlerimiz</h1>
+        <p>Her seviyeye uygun, özel hazırlanmış eğitimlerimize katılabilirsiniz!</p>
+        <div class="row">
+            <div class="egitim-col">
+                <h3>Başlangıç</h3>
+                <p>Herkes için temel olacak bu eğitimde temel bilgileri ve temel hareketleri öğreneceksiniz. Yeni başlayan öğrenciler için ideal. <br> VE ŞUAN İNDİRİMDE SAKIN KAÇIRMAYIN !</p>              
+            </div>
+            <div class="egitim-col">
+                <h3>Orta Seviye</h3>
+                <p>Bu eğitim en az 6 ay spor geçmişi olan öğrenciler için ideal. Zaten temel olan her şeyi bildiğiniz için bu eğitimde daha çok orta seviye olarak ders alacaksınız.</p>              
+            </div>
+            <div class="egitim-col">
+                <h3>ileri</h3>
+                <p>Bu eğitim en az 2 yıl spor geçmişi olan öğrencilerimiz için ideal. Zorlu dersler ile adeta vücudunuzu baştan yazacaksınız. Bu eğitimde vücudunuz cayır cayır yanacak.</p>              
+            </div>
+        </div>
+        <a href="course.html" class="more" >Daha Fazla Bilgi...</a>
+    </section>
+
+    <!-- Spor Salonunun Bulunduğun Yerler -->
+    <section class="gym reveal">
+        <h1>Küresel Spor Salonumuz</h1>
+        <p>Dünyanın en büyük spor salonu olma ünvanıyla birlikte dünyanın farklı bölgelerinde faaliyet göstermekteyiz.</p>
+        <div class="row">
+            <div class="gym-col">
+                <img src="/img/res1.jpg" alt="res1">
+                <div class="layer">
+                    <h3>LONDRA</h3>
+                </div>
+            </div>
+            <div class="gym-col">
+                <img src="/img/res2.jpg" alt="res2">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="gym-col">
+                <img src="/img/res3.jpg" alt="res3">
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kulüpler -->
+    <a id="kulüp"></a>
+    <section class="kulüp reveal">
+        <h1>Kulüplerimiz</h1>
+        <p>Sizi daha çok geliştirecek ve sosyalleştirecek olan kulüplerimize katılabilirsiniz!</p>
+        <div class="row">
+            <div class="kulüp-col">
+                <a href="gymnastic.html">
+                    <img src="/img/gymnastic.png" alt="gymRes">
+                    <h3>Jimnastik</h3>
+                    <p>Jimnastik, bedeni, fiziksel yapısını düzeltme güçlendirme ve geliştirme amacıyla düzenli hareket ettirme sanatıdır.</p>
+                </a>
+            </div>
+            <div class="kulüp-col">
+                <a href="boks.html">
+                    <img src="/img/boxing.png" alt="boxRes">
+                    <h3>Boks</h3>
+                    <p>Boks, iki kişinin hakem gözetiminde karşılıklı yumruklaştıkları ve birbirlerini yenmeye çalıştıkları spor müsabakasıdır.</p>
+                 </a>   
+            </div>
+            <div class="kulüp-col">
+                <a href="mma.html">
+                    <img src="/img/mma.png" alt="mmaRes">
+                    <h3>MMA</h3>
+                    <p>Karışık dövüş sanatlarının kısaltması, farklı dövüş sanatları disiplinlerinden gelen sporcuların rekabet ettiği dövüş sporu.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Design -->
+    <section class="mobile reveal">
+        <div class="row">
+            <div class="telefon">
+                <img src="/img/mobileRes.png" alt="">
+                <img src="/img/telRes.png" alt="">
+            </div>
+            <div class="mobile-col">
+                <h1>Şimdi Mobilde!</h1>
+                <p>Arnold Gym Şimdi Mobilde. Hemen Edinin!</p>
+            </div>
+            <div class="downloadBtn">
+                <div class="download googlePlay">
+                    <i class="fa fa-android fa-2x"></i>
+                    <span class="p1">Download From</span>
+                    <span class="p2">Google Play</span>
+                </div>
+                <div class="download appStore">
+                    <i class="fa fa-apple fa-2x"></i>
+                    <span class="p1">Download From</span>
+                    <span class="p2">App Store</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Özellikler -->
+    <section class="ozellik reveal">
+            <div class="resFit">
+                <img src="/img/fit.png" alt="fitRes" class="img-fit">
+             </div>
+            <div class="ozellik-col">
+                <div class="ozellik-box">
+                    <div class="ozellik-left">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <div class="ozellik-right">
+                        <h4>Eğitmen Sertifikası</h4>
+                        <p>Eğitmenlerimizin hepsi tam donanımlı olup bu konuda sertifika sahibidirler.</p>
+                    </div>
+                </div>
+                <div class="ozellik-box">
+                    <div class="ozellik-left">
+                        <i class="fa fa-heartbeat"></i>
+                    </div>
+                    <div class="ozellik-right">
+                        <h4>Ücretsiz Danışmanlık</h4>
+                        <p>İstediğiniz zaman eğitmenlerimize her türlü sorularınızı ve sorunlarınızı danışabilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="ozellik-box">
+                    <div class="ozellik-left">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="ozellik-right">
+                        <h4>Esnek Zaman</h4>
+                        <p>08:00 - 00.00 saatleri arasında salonumuza ve kulüplerimize katılım gösterebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referanslar -->
+    <section class="referanslar reveal">
+        <h1>Öğrenci Görüşleri</h1>
+        <p>Salonumuza üye olan öğrencilerimizin görüşleri bizim için çok değerli !</p>
+        <div class="row" >
+            <div class="ref-col">
+                <img src="/img/user1.jpg" alt="user1">
+                <div>
+                    <p>Merhaba Ben Batuhan. Sınıf öğretmeniyim ve bu yüzden de bir çok öğrencim var. Tabi bu durum beni gün içinde saatlerce ayakta durmaya zorluyo. Ayaklarım ve belim çok ağrıyo. Ama ARNOLD GYM' in jimnastik kulübü sayesinde artık hiç bir şikayetim yok. Eğitime devam!</p>
+                    <h3>Batuhan Kılıç</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="ref-col">
+                <img src="/img/user2.jpg" alt="user2">
+                <div>
+                    <p>Merhaba ben Doğukan. Yazılımcı olduğumdan dolayı bazen masabaşında saatlerce oturabiliyodum ve bu durum benim canımı sıkıyodu. Çünkü boynum ve belim çok ağrıyodu. Ama ARNOLD GYM' in eğitim ve kulüpleri sayesinde artık hiç bir şikayetim yok. Teşekkürler ARNOLD GYM.</p>
+                    <h3>Doğukan Keser</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <a id="iletisim"></a>
+    <section class="iletisim reveal">
+        <h1>Bizimle iletişime geçmek için</h1>
+        <a href="iletisim.html" class="iletisimBtn">İLETİŞİME GEÇ</a>
+    </section>
+
+    <!-- Footer -->
+    <a id="footer"></a>
+    <section class="footer">
+        <h4>Hakkımızda</h4>
+        <p>Biz 2023 yılında kurulduk ve daha bir yıl dolmadan dünyaya açıldık.<br>
+         Sizleride aramızda görmekten gurur ve sevinç duyarız. Teşekkürler! ARNOLD GYM</p>
+        <div class="icons">
+            <a href="https://github.com/TuranErdem42" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/turan-erdem-uyan%C4%B1k-8178ab263/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+        </div>
+        <ul>
+            <li><a href="#anasayfa">ANASAYFA</a></li>
+        </ul>
+        <p>Made with <i class="fa fa-heart"></i> by ARNOLD GYM</p>
+    </section>
+    <div id="progressBar"></div>
+
+    <!-- Javascript -->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+        // Dark Mod
+        let toggleBtn=document.getElementById("toggleBtn");
+        let btnIcon=document.getElementById("btnIcon");
+        let egt1=document.getElementById("egt1");
+        let egt2=document.getElementById("egt2");
+
+        toggleBtn.onclick=function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                btnIcon.src="img/sun.png";
+                btnIcon.style.width="45px";
+                btnIcon.style.background="#000";
+                egt1.style.visibility="visible";
+                egt2.style.visibility="visible";
+            }
+            else{
+                btnIcon.src="img/moon.png";
+                btnIcon.style.width="45px";
+                btnIcon.style.background="#fff";
+                egt1.style.visibility="hidden";
+                egt2.style.visibility="hidden";     
+            }
+        }
+
+        // Progress Bar
+        const progressBar=document.querySelector("#progressBar");
+        const body=document.querySelector("body");
+
+        const animateProgressBar = () => {
+            let scrollDistance = -body.getBoundingClientRect().top;
+            let progressWidth = (scrollDistance / body.getBoundingClientRect().height) * 114;               
+            let value=Math.floor(progressWidth);
+            progressBar.style.width = value +"%";
+
+            if(value<0){
+                progressBar.style.width="0%";
+            }
+        };
+        window.addEventListener("scroll", animateProgressBar);
+
+        // Scroll Animation
+        window.addEventListener("scroll",reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll(".reveal");
+
+            for(var i = 0; i < reveals.length; i++){
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if(revealTop < windowHeight - revealPoint){
+                    reveals[i].classList.add("active");
+                }
+                else{
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        // Loader Page
+        const fadeOut = () => {
+            const loader=document.getElementById("loading");
+            loader.classList.add("fade");
+        }
+        window.addEventListener("load", fadeOut);
+    </script>
+</body>
+</html>

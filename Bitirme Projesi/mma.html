@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome CSS -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Fontlar -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+      <link rel="stylesheet" href="/style/mma.css" />
+      <link rel="stylesheet" href="/style/header.css" />
+      <link rel="stylesheet" href="style/loading.css">
+      <title>Karışık Dövüş sanatları</title>
+  </head>
+  <body>
+    <div id="loading"></div>
+    <!-- Header -->
+    <div class="title">
+      <section class="header">
+        <nav>
+          <a href="index.html"><img src="/img/logo.png" alt="" /></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="index.html">ANASAYFA</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+          <h1>MMA</h1>
+          <a href="giris.html">Hemen Kaydol</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bilgi Bölümü -->
+    <section class="mma">
+      <!-- MMA'nın Faydaları -->
+      <div class="row">
+        <div class="mma-col">
+          <img src="/img/mmaRes1.jpg" alt="" id="res1" />
+          <h2>MMA'nın Faydaları</h2>
+          <p>Kişide kas yapısını düzenler.</p>
+          <p>Kişiye fizyolojik açıdan yarar sağlar.</p>
+          <p>
+            Kişinin hareket etme mekanizmasını düzene sokar. Böylelikle kişinin
+            sosyal hayatta başarısı daha da artar.
+          </p>
+          <p>Ruh halini iyileştirir.</p>
+        </div>
+      </div>
+
+      <!-- MMA'nın Tarihçesi -->
+      <div class="row">
+        <div class="mma-col">
+          <img src="/img/mmaRes2.jpg" alt="" id="res2" />
+          <h2>MMA'nın Tarihçesi</h2>
+          <p>
+            Mixed Martial Arts (MMA) yani “Karışık Dövüş Sanatları” diğer
+            mücadele sporlarında kullanılan ve çok geniş savunma,mücadele ve
+            atak teknikleri içeren, tam temas mücadele ve savunma sporudur.İlk
+            MMA turnuvası 1993 yılında Amerika’nın Denver şehrinde
+            yapıldı.Değişik dövüş sporlarını kullanan sporcular bu yarışmaya
+            katıldı.Bu turnuvaya katılanlar,Kick-Boks sporunu temsilen Patrick
+            Smith ve Kevin Rosier, savate dövüşcüsü olan Gerard Gordeu, karate
+            ustası Zane Frazier, shoot fighter Ken Shamrock, sumo güreşcisi
+            Teila Tuli, profosyonel bir boksör olan Art Jimmerson ve Brazilian
+            Jiu-Jitsu ustası siyah kuşak Royce Gracie’di.Düzenlenen bu turnuvayı
+            içlerinde en çelimsiz olan Royce Gracie kazanmıştır. Royce
+            Gracie’nin bu başarısı dünya tarafından büyük bir şaşkınlıkla
+            karşılanmıştı. 1993 yılında yapılan bu turnuvada dövüşürken fazla
+            kural yoktu çoğu şey serbestti. MMA sporunda karşı tarafı ciddi
+            anlamda sakatlayabilecek tekniklere sınırlamalar getirildikten sonra
+            spor şu andaki halini aldı.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kulüp Bilgisi -->
+      <h1>Bu Kulüpte Seni Neler Bekliyor?</h1>
+      <div class="row">
+        <div class="mma-col">
+          <img src="/img/mmaRes4.jpg" alt="" id="res4" />
+          <h2>Fitlik, Kondisyon ve Güçlü Kaslar</h2>
+          <font>
+            MMA kulübü ile kondisyonunuz artacak, kaslarınız güçlenecek. Ayrıca
+            güzel görünümlü fit bir vucüda sahip olacaksınız. Düzenli olarak
+            devam ettiğinizde kendinizde gözle görülür değişiklikleri fark edeceksiniz. <br /><span>
+              MMA' nın kişiye her mesafede ve durumda cevap verebilecek alt yapıyı
+              kazandırdığı için günlük hayatta karşılaşabileceğiniz
+              konfrontasyonlarda sizi çok avantajlı kılacağını biliyor muydunuz
+              ?</span
+            >
+          </font>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mma-col">
+          <img src="/img/mmaRes3.jpg" alt="" id="res3" />
+          <h2>Haftalık MMA Maçları</h2>
+          <font>
+            Haftalık MMA maçları sayesinde profesyonel dövüşçülerin maçlarını
+            canlı olarak izleyebileceksiniz. Ayrıca isterseniz günlük düzenlenen
+            -profesyonel eğitmenler gözetiminde- ödüllü MMA maçlarına da
+            katılabilirsiniz.
+          </font>
+        </div>
+      </div>
+    </section>
+
+    <!-- Javascript -->
+    <script>
+      let navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+
+       // Loader Page
+       const fadeOut = () => {
+            const loader=document.getElementById("loading");
+            loader.classList.add("fade");
+        }
+        window.addEventListener("load", fadeOut);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,841 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/img/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  padding: 5px 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a,
+ul li a {
+  color: #c2bfbf;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin-left: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 60%;
+}
+
+.nav-links ul li:hover::before {
+  width: 60%;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+  opacity: 0;
+}
+
+.egitimBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.egitimBtn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* Text Animasyonu */
+.slide-left {
+  animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+h1.slide-left {
+  animation-delay: 0.8s;
+}
+
+a.slide-left {
+  animation-delay: 1.8s;
+}
+
+/* Dark Tema */
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --card-color: #fff3f3;
+  --layer-color: rgba(226, 0, 0, 0.6);
+  --layer-text-color: #fff;
+  --box-shadow: rgba(0, 0, 0, 0.2);
+  --icon-color: #f44336;
+}
+
+.dark-theme {
+  --background-color: #000;
+  --text-color: #fff;
+  --card-color: #fff;
+  --layer-color: rgba(255, 255, 255, 0.6);
+  --layer-text-color: #000;
+  --box-shadow: rgb(255, 255, 255);
+  --icon-color: #fff;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  overscroll-behavior-y: none;
+}
+
+.toggleBtn {
+  width: fit-content;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#btnIcon {
+  width: 40px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Eğitimler */
+.egitim {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+/*Koyu Tema Resimler Start */
+.egitimRes {
+  width: 20%;
+  display: inline-block;
+}
+
+#egt1 {
+  width: 25%;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  transform: rotate(-20deg);
+  visibility: hidden;
+}
+
+#egt2 {
+  width: 25%;
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  transform: rotate(-20deg);
+  visibility: hidden;
+}
+/* Resimler End */
+
+.egitim h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.egitim p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.egitim-col h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #000;
+}
+
+.egitim .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.egitim-col {
+  flex-basis: 31%;
+  background: var(--card-color);
+  border-radius: 10px;
+  margin-bottom: 3%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.egitim-col:hover {
+  box-shadow: 0 0 20px 0px var(--box-shadow);
+}
+
+.more {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 5%;
+  transition: 0.5s;
+}
+
+.more:hover {
+  box-shadow: inset 250px 0 0 0 rgb(255, 183, 195);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Spor Salonunun Bulunduğun Yerler */
+.gym {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.gym .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gym h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.gym p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.gym-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gym-col img {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: var(--layer-color);
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: bold;
+  color: var(--layer-text-color);
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/* Kulüpler */
+.kulüp {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2%;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.kulüp .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kulüp-col img {
+  width: 50px;
+  transition: transform 0.5s;
+}
+
+.kulüp-col:hover img {
+  transform: scale(1.2);
+}
+
+.kulüp h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.kulüp p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.kulüp-col h3 {
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.kulüp-col {
+  flex-basis: 31%;
+  background: var(--card-color);
+  border-radius: 10px;
+  margin-bottom: 3%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  position: relative;
+}
+
+.kulüp-col a {
+  text-decoration: none;
+}
+
+.kulüp-col:hover {
+  box-shadow: 0 0 20px 0px var(--box-shadow);
+}
+
+/* Mobile Design */
+.mobile {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 15%;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+}
+
+.mobile .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.telefon {
+  margin-right: 10%;
+}
+
+.telefon img:nth-child(1) {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.telefon img:nth-child(2) {
+  height: 560px;
+  width: 270px;
+  position: absolute;
+  top: 58%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
+.mobile-col h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-right: 180px;
+  margin-top: 20%;
+}
+
+.mobile-col p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  margin-right: 180px;
+}
+
+.download {
+  width: 200px;
+  height: 75px;
+  background: #000;
+  border-radius: 8px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  float: left;
+}
+
+.download:hover .fa {
+  transform: scale(1.5);
+}
+
+.appStore {
+  margin-left: 28%;
+}
+
+.googlePlay {
+  margin-left: 5%;
+}
+
+.download .fa {
+  color: #fff;
+  position: absolute;
+  top: 31%;
+  left: 13%;
+  transition: transform 0.5s;
+}
+
+.p1,
+.p2 {
+  position: absolute;
+  left: 70px;
+}
+
+.p1 {
+  top: 20px;
+  font-size: 12px;
+}
+
+.p2 {
+  top: 35px;
+  font-size: 16px;
+}
+
+/* Özellikler */
+.ozellik {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.resFit {
+  margin-left: 6%;
+  display: inline-block;
+}
+
+.ozellik-col {
+  padding: 20px;
+  margin-left: 4%;
+  display: inline-block;
+}
+
+.ozellik-box {
+  height: 120px;
+}
+
+.ozellik-box .ozellik-left {
+  height: 120px;
+  width: 10%;
+  float: left;
+}
+
+.ozellik-box .ozellik-left .fa {
+  padding-top: 13px;
+  font-size: 50px;
+  color: #f44336;
+  margin-right: 15px;
+  transition: transform 0.5s;
+}
+
+.ozellik-box:hover .fa {
+  transform: scale(1.2);
+}
+
+.ozellik-box .ozellik-right {
+  height: 120px;
+  width: 80%;
+  margin-left: 20px;
+  float: left;
+}
+
+.ozellik-box .ozellik-right h4 {
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.ozellik-box .ozellik-right p {
+  text-align: left;
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* Referanslar */
+.referanslar {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.referanslar .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.referanslar h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.referanslar p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.ref-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: var(--card-color);
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+  transition: 0.5s;
+}
+
+.ref-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.ref-col h3 {
+  margin-top: 15px;
+  text-align: left;
+  color: #000;
+}
+
+.ref-col .fa {
+  color: darkgoldenrod;
+}
+
+.ref-col:hover {
+  box-shadow: 0 0 20px 0px var(--box-shadow);
+}
+
+.ref-col:hover img {
+  transform: scale(1.4);
+}
+
+/* İletişim */
+.iletisim {
+  margin: 180px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/iletisim.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+  transition: 0.5s;
+  box-shadow: 0 0 20px 0px var(--box-shadow);
+}
+
+.iletisim h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.iletisimBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  font-size: 20px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.iletisimBtn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.footer p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* İcons */
+.icons .fa {
+  color: var(--icon-color);
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+  transition: transform 0.5s;
+}
+
+.icons .fa:hover {
+  transform: scale(1.4);
+}
+
+.fa-heart {
+  color: var(--icon-color);
+}
+
+/* Progress Bar */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(to right, #f44336, #ffc371);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.2s ease-out;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f44336;
+}
+
+/* Scroll Animation */
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .text-box h1 {
+    font-size: 25px;
+  }
+
+  .header {
+    overflow: hidden;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    color: #fff;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .egitimBtn {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .more {
+    font-size: 18px;
+    padding: 10px 10px;
+  }
+
+  .gym-col img {
+    height: 100%;
+  }
+
+  .gym-col h3 {
+    font-size: 20px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .resFit img {
+    margin-top: 100px;
+    width: 330px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .ref-col img {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  .iletisim h1 {
+    font-size: 24px;
+  }
+}
